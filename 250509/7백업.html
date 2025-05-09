@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        
+        .container {
+            /* border: 5px solid rgb(129, 138, 14); */
+            border-bottom: 1px solid red;
+            padding-bottom: 40px;
+
+            display: grid;
+            gap: 60px;
+
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            text-align: center;
+
+
+        }
+
+        .container2 {
+            display: grid;
+
+            grid-template-columns: 800px 200px;
+            /* width: 300px;
+            height: 300px; */
+         
+           
+
+        }
+
+        .container3 {
+            display: flex;
+            flex-direction: column;
+           justify-content: flex-start
+           
+
+            width: 400px;
+            height: 10px;
+            gap: 30px;
+
+
+        }
+
+        .box {
+            
+            border: 1px solid rgb(157, 194, 186);
+
+
+        }
+
+        .box2 {
+            border: 3px solid rgb(97, 17, 163);
+            width: 50%;
+            height: 100%;
+           
+
+
+        }
+
+        
+
+        
+        .container img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+
+            transition: transform 0.2s;
+
+            border-radius: 8px;
+            
+          
+        }
+
+        .img-wrapper {
+            background-color: white;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+            animation-name: fadeslidein;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-fill-mode: both;
+            animation-play-state: running;
+        
+
+        }
+        .img-wrapper:hover {
+            background-color: rgb(252, 197, 248);
+            transform: scale(1.03);
+        }
+        .test1 {
+            border: 2px solid hwb(240 99% 0%);
+           margin-left: 100px;
+           padding-left: 20px;
+        }
+
+            .img-wrapper img {
+            width: 150px;
+            height: 200px;
+            border-radius: 8px;
+            display: block;
+            /* 0 : 위쪽 , 아랫쪽 의미, auto : 좌, 우 의미 -> 가운데 정렬, 자주 쓰는 패턴 */
+            margin: 0 auto;
+            }
+
+        .container2 img {
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+
+            transition: transform 0.2s;
+
+            border-radius: 8px;
+
+            
+        }
+
+        
+        .container3 img {
+            width: 50%;
+            height: 200px;
+            object-fit: cover;
+
+            transition: transform 0.2s;
+
+            border-radius: 8px;
+            
+        }
+
+         @keyframes fadeSlideIn {
+
+            /* 초기, 중간, 마지막 단계 총 3단계 화면에 표시 */
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9) rotate(-5deg);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translateY(10px) scale(1.02) rotate(2deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1) rotate(0deg);
+            }
+        }
+
+        .container img:hover {
+
+            transform: scale(1.03);
+            background-color: bisque;
+
+        }
+
+        .container2 img:hover {
+
+            transform: rotate(20deg);
+            background-color: bisque;
+
+
+        }
+
+        .container3 img:hover {
+
+            transform: skew(15deg, 10deg);
+            background-color: bisque;
+
+
+        }
+
+        .text {
+            color: rgb(148, 124, 17);
+            text-align: center;
+            font-size: 60px;
+            margin bottom: 20px;
+            border-bottom: 1px solid black;
+
+        }
+
+        .text2 {
+            color: rgb(32, 218, 156);
+            text-align: center;
+            font-size: 60px;
+            margin bottom: 20px;
+            border-bottom: 1px solid black;
+        }
+
+
+        /* 반응형 */
+        .fullscreen {
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        {}
+    </style>
+    <h2 class="text">사진첩</h2>
+    <div class="container">
+
+        <div class="img-wrapper test1"><img class="box" src="css/img/test1.jpg" alt="샘플사진1">사진</div>
+        <div class="img-wrapper test1"><img class="box" src="css/img/test2.jpg" alt="샘플사진2">사진</div>
+        <div class="img-wrapper test1"><img class="box" src="css/img/test3.png" alt="샘플사진3">사진</div>
+        <div class="img-wrapper test1"><img class="box" src="css/img/test4.jpg" alt="샘플사진4">사진</div>
+        <div class="img-wrapper test1"><img class="box" src="css/img/test5.jpg" alt="샘플사진5">사진</div>
+        <div class="img-wrapper test1"><img class="box" src="css/img/test6.jpg" alt="샘플사진6">사진</div>
+
+
+    </div>
+    <h2 class="text2">상품</h2>
+
+    <div class="container2">
+        <div><img class="box2" src="css/img/test1.jpg" alt="샘플사진1">1</div>
+        <div><img class="box2" src="css/img/test2.jpg" alt="샘플사진2"></div>
+        <div><img class="box2" src="css/img/test3.png" alt="샘플사진3"></div>
+        <div><img class="box2" src="css/img/test4.jpg" alt="샘플사진4"></div>
+        <div><img class="box2" src="css/img/test5.jpg" alt="샘플사진5"></div>
+        <div><img class="box2" src="css/img/test6.jpg" alt="샘플사진6"></div>
+    </div>
+
+    
+</body>
+
+</html>
