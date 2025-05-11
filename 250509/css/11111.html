@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <style>
+        .container {
+            border: 5px solid pink;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        }
+
+        .box {
+            border: 1px solid red;
+            /* width: 200px; */
+        }
+        .container img {
+            width: 100%;
+            height:  200px;
+            object-fit: cover;
+               border-radius: 8px;
+               border-radius: 8px;
+        }
+        .container img:hover {
+            /*마우스 오버(커서를 위에 올릴 경우) 확대 효과*/
+            /* transform: scale(1.03); */
+            transform: translate(100px, 100px);
+            /* transform: rotate(45deg) */
+            /* transform: skew(45deg, 30deg) */
+            /* 주기를 지정해보기,  */
+            /* transform: scale(1.03); */
+            background-color: aquamarine;
+        }
+    </style>
+    <div class="container">
+
+       <img src="img/test1.jpg" alt="샘플사진1">
+        <img src="img/test2.jpg" alt="샘플사진2">
+        <img src="img/test3.png" alt="샘플사진3">
+        <img src="img/test4.jpg" alt="샘플사진4">
+        <img src="img/test5.jpg" alt="샘플사진5">
+        <img src="img/test6.jpg" alt="샘플사진6">
+        <img src="img/test7.jpg" alt="샘플사진7">
+
+
+    </div>
+
+</body>
+<!--  -->
