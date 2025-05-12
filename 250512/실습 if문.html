@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="toggleBtn" value="보이기">
+    <br>
+    <img id="sample_img3" src="/img/test3.jpg" alt="샘플이미지1" width="300px" height="200px">
+
+    <input type="button" id="btn3" value="hide">
+
+  
+
+
+    <script>
+
+        const img = document.querySelector('#sample_img3');
+        const toggleBtn = document.getElementById('toggleBtn');
+
+        // 버튼 클릭 시 실행되는 함수
+        toggleBtn.addEventListener('click', function () {
+            // 이미지가 보이는지 확인
+            if (img.style.display === 'none') {
+                // 이미지가 숨겨져 있으면 보이게 하고 버튼 텍스트를 'hide'로 변경
+                img.style.display = 'block';
+                toggleBtn.value = '숨기기';
+            } else {
+                // 이미지가 보이면 숨기고 버튼 텍스트를 'show'로 변경
+                img.style.display = 'none';
+                toggleBtn.value = '보이기';
+            }
+        });
+
+     
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>이벤트핸들러 2-4</h1>
+    <input type="button" value="방법2-hide" id="btn-test2-hide">
+    <input type="button" value="방법2-show" id="btn-test2-show">
+    <img src="/img/test1.jpg" alt="테스트이미지" width="300px" id="test-img">
+    <br>
+    <h2>방법3 작업</h2>
+    <input type="button" value="방법3-hide" id="btn-test3-hide">
+    <input type="button" value="방법3-show" id="btn-test3-show">
+    <img src="/img/test1.jpg" alt="테스트이미지" width="300px" id="test-img2">
+    <br>
+    <h2>방법4</h2>
+    <input type="button" value="방법4-hide" id="btn-test4-hide">
+    <input type="button" value="방법4-show" id="btn-test4-show">
+    <img src="/img/test1.jpg" alt="테스트이미지" width="300px" id="test-img3">
+
+
+    <script>
+        document.getElementById('btn-test2-hide').onclick = function () {
+            document.querySelector('#test-img').style.display = 'none'
+        }
+        document.getElementById('btn-test2-show').onclick = function () {
+            document.querySelector('#test-img').style.display = 'block'
+        }
+
+        const btn = document.getElementById('btn-test3-hide')
+        btn.addEventListener('click',
+            function () { document.querySelector('#test-img2').style.display = 'none' })
+        const btn2 = document.getElementById('btn-test3-show')
+        btn2.addEventListener('click',
+            function () { document.querySelector('#test-img2').style.display = 'block' })
+
+        const hideClick = () => document.querySelector('#test-img2').style.display = 'none'
+        const btn5_hiede = document.getElementById('btn-test4-hide')
+        const showClick2 = () => document.querySelector('#test-img2').style.display = 'block'
+        const btn6_show = document.querySelector('#btn-test4-show')
+        btn5.addEventListener('click', btn5_hied)
+        btn6.addEventListener('click', btn6_show)
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="sample_img1" src="/img/test1.jpg" alt="샘플이미지1" width="300px">
+    <br>
+    <input type="button" id="btn1" value="hide">
+    <input type="button" id="btn2" value="show">
+    <br>
+    <img id="sample_img2" src="/img/test2.jpg" alt="샘플이미지1" width="300px">
+    <br>
+    <input type="button" id="btn3" value="hide">
+    <input type="button" id="btn4" value="show">
+    <br>
+    <img id="sample_img3" src="/img/test3.jpg" alt="샘플이미지1" width="300px" height="200px">
+    <br>
+    <input type="button" id="btn5" value="hide">
+    <input type="button" id="btn6" value="show">
+
+    <h2>버튼하나로 작업 토글</h2>
+
+    <script>
+
+        document.getElementById('btn1').onclick = function () {
+            document.querySelector('#sample_img1').style.display = 'none'
+        }
+        document.getElementById('btn2').onclick = function () {
+            document.querySelector('#sample_img1').style.display = 'block'
+        }
+        const btn = document.getElementById('btn3')
+        btn.addEventListener('click',
+            function () { document.querySelector('#sample_img2').style.display = 'none' })
+        const btn2 = document.getElementById('btn4')
+        btn2.addEventListener('click',
+            function () { document.querySelector('#sample_img2').style.display = 'block' })
+
+        const handleClick = () => document.querySelector('#sample_img3').style.display = 'none'
+        const btn5 = document.getElementById('btn5')
+          const handleClick2 = () => document.querySelector('#sample_img3').style.display = 'block'
+        const btn6 = document.querySelector('#btn6')
+        btn5.addEventListener('click', handleClick)
+        btn6.addEventListener('click', handleClick2)
+
+        //하나의 버튼으로 스위치처럼 on/off , show/hide
+        //처음상태는 버튼 hide, 이미지: 보여짐
+        //버튼클릭(hide) 2번째 상태, 버튼 show, 이미지는 안보임
+        //버튼클릭 show클릭 버튼 hide 이미지는 보임
+
+        
+
+    </script>
+    <!-- <script>
+        const btn = document.getElementById('btn3')
+        btn.addEventListener('hide',
+            function () { document.querySelector('#sample_img2').style.display = 'block'})
+    </script> -->
+
+</body>
+
+</html>
